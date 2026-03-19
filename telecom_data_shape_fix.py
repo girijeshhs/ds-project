@@ -1,5 +1,9 @@
 import numpy as np
 import pandas as pd
+import matplotlib
+
+matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 
 
@@ -62,4 +66,5 @@ plt.ylabel("Total Usage")
 plt.xticks(rotation=45)
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.tight_layout()
-plt.show()
+plt.savefig("monthly_telecom_usage.png", dpi=200)
+print("\nGraph saved as monthly_telecom_usage.png")
